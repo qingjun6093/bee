@@ -6,6 +6,7 @@
 		<module>../common</module>
 		<module>../api</module>
 		<module>../provider</module>
+		<module>../consumer</module>
 	</modules>
 
 
@@ -35,6 +36,11 @@
 			<artifactId>common</artifactId>
 			<version>${bee.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.bee</groupId>
+			<artifactId>passport-api</artifactId>
+			<version>${bee.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -46,6 +52,13 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>

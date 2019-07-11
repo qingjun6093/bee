@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>account-api</module>
+        <module>passport-api</module>
     </modules>
 
 </project>

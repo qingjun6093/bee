@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>account</module>
+        <module>passport</module>
     </modules>
 
 </project>
