@@ -12,22 +12,24 @@ import java.io.Serializable;
 public class BeeClientReq implements Serializable{
     private static final long serialVersionUID = 2525986391450781138L;
 
-    private String origin;
+    private String platform;
 
     private String channel;
 
     private String isInvestor;
 
-    private String mid;
-
     private String ip;
 
-    public String getOrigin() {
-        return origin;
+    private String mid;
+
+    private String appVersion;
+
+    public String getPlatform() {
+        return platform;
     }
 
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public void setPlatform(String platform) {
+        this.platform = platform;
     }
 
     public String getChannel() {
@@ -62,14 +64,22 @@ public class BeeClientReq implements Serializable{
         this.ip = ip;
     }
 
+    public String getAppVersion() {
+        return appVersion;
+    }
+
+    public void setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+    }
+
     @Override
     public String toString() {
         return JSON.toJSONString(this);
     }
 
     public enum Channel {
-        BEE("bee","小蜜蜂端"),
-        HORNET("hornet","大黄蜂端")
+        BEE("BEE","小蜜蜂端"),
+        HORNET("HORNET","大黄蜂端")
         ;
         private String value;
         private String desc;
@@ -88,16 +98,16 @@ public class BeeClientReq implements Serializable{
         }
     }
 
-    public enum Origin {
-        PC("pc","web网页端"),
-        IOS("ios","ios"),
-        ANDROID("android","android"),
-        UNKNOWN("unknown","未知"),
+    public enum Platform {
+        PC("PC","web网页端"),
+        IOS("IOS","ios"),
+        ANDROID("ANDROID","android"),
+        UNKNOWN("UNKNOWN","未知"),
         ;
         private String value;
         private String desc;
 
-        Origin(String value, String desc) {
+        Platform(String value, String desc) {
             this.value = value;
             this.desc = desc;
         }

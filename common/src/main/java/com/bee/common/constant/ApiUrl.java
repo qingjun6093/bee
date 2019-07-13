@@ -5,7 +5,8 @@ package com.bee.common.constant;
  * @date 2019/7/11
  * @desc
  */
-public interface ReqUrl {
+public interface ApiUrl {
+    String CLIENT = "/client";
     String PASSPORT = "/passport";
     String INVEST = "/invest";
 }

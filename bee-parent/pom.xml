@@ -19,14 +19,12 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring.boot.version>2.1.5.RELEASE</spring.boot.version>
+		<spring-boot.version>2.1.5.RELEASE</spring-boot.version>
 		<fastjson.version>1.2.47</fastjson.version>
 		<spring.version>5.1.7.RELEASE</spring.version>
 		<bee.version>0.0.1-SNAPSHOT</bee.version>
 		<mybatis.springboot.version>2.0.1</mybatis.springboot.version>
 	</properties>
-
-
 
 	<dependencyManagement>
 	<dependencies>
@@ -54,21 +52,20 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>${spring.boot.version}</version>
+			<version>${spring-boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring.boot.version}</version>
+			<version>${spring-boot.version}</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot.version}</version>
 		</dependency>
 
 		<dependency>

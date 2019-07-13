@@ -15,6 +15,7 @@
 
     <modules>
         <module>passport</module>
+        <module>notice</module>
     </modules>
 
 </project>

@@ -1,4 +1,4 @@
-package com.bee.passport;
+package com.bee.notice;
 
 /**
  * @author jjq
@@ -7,5 +7,5 @@ package com.bee.passport;
  * @desc todo
  */
 
-public class BeeAccountApplication {
+public class BeeNoticeApplication {
 }

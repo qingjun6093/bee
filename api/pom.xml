@@ -15,6 +15,7 @@
 
     <modules>
         <module>passport-api</module>
+        <module>notice-api</module>
     </modules>
 
 </project>
