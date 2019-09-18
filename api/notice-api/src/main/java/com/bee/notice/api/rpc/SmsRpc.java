@@ -3,8 +3,9 @@ package com.bee.notice.api.rpc;
 /**
  * @author jjq
  * @version 1.0
- * @date 2019/7/13
- * @desc 推送的rpc方法
+ * @date 2019/8/26
+ * @desc 短信rpc方法
  */
-public interface PushRpc {
+public interface SmsRpc {
+
 }

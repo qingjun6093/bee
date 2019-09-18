@@ -9,8 +9,7 @@ import java.io.Serializable;
  * @date 2019/7/11
  * @desc client-客户端基础请求体
  */
-public class BeeClientReq implements Serializable{
-    private static final long serialVersionUID = 2525986391450781138L;
+public class BeeReq implements Serializable{
 
     private String platform;
 

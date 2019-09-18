@@ -1,7 +1,8 @@
 package com.bee.client.controller.basic;
 
-import com.bee.common.BeeClientResp;
+import com.bee.common.BeeResp;
 import com.bee.passport.api.constant.PassportApiUrl;
+import com.bee.passport.api.req.RegisterSmsReq;
 import com.bee.passport.api.resp.RegisterSmsResp;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PortalController {
 
     @RequestMapping(value = PassportApiUrl.registerSms,method = RequestMethod.POST)
-    public BeeClientResp<RegisterSmsResp> sendRegisterSms(){
+    public BeeResp<RegisterSmsResp> sendRegisterSms(RegisterSmsReq req){
+
         return null;
     }
 

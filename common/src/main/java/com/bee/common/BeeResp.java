@@ -2,7 +2,6 @@ package com.bee.common;
 
 import com.alibaba.fastjson.JSON;
 import com.bee.common.constant.BeeCode;
-import com.bee.common.constant.BeeMsg;
 
 import java.io.Serializable;
 
@@ -12,7 +11,7 @@ import java.io.Serializable;
  * @date 2019/6/16
  * @desc client全局基础响应类
  */
-public class BeeClientResp<T> implements Serializable{
+public class BeeResp<T> implements Serializable{
     private static final long serialVersionUID = 2663449263928417461L;
 
     private Integer code;
@@ -21,23 +20,23 @@ public class BeeClientResp<T> implements Serializable{
 
     private T data;
 
-    public  BeeClientResp success(){
-        return new BeeClientResp(BeeCode.SUCCESS, BeeMsg.SUCCESS);
+    public  BeeResp success(){
+        return new BeeResp(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc());
     }
 
 
-    public  BeeClientResp success(T data){
-        return new BeeClientResp(BeeCode.SUCCESS, BeeMsg.SUCCESS, data);
+    public  BeeResp success(T data){
+        return new BeeResp(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc(), data);
     }
 
 
-    public BeeClientResp(Integer code, String msg, T data) {
+    public BeeResp(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
     }
 
-    public BeeClientResp(Integer code, String msg) {
+    public BeeResp(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
