@@ -1,10 +1,17 @@
 package com.bee.passport.dao;
 
+import com.bee.common.constant.Num;
 import com.bee.passport.api.entity.User;
 import com.bee.common.constant.EntityState;
+import com.bee.passport.api.model.param.UserParam;
+import com.bee.passport.mapper.UserMapper;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author jjq
@@ -15,7 +22,14 @@ import java.util.Date;
 @Component
 public class UserDao {
 
-    public User newUser(
+    @Resource
+    private UserMapper userMapper;
+
+    /**
+     * 入库初始化User实体
+     * @return
+     */
+    public User initDbUser(
             String name,
             String mobile,
             String password,
@@ -47,6 +61,44 @@ public class UserDao {
     }
 
     public int insert(User user){
-        return 0;
+        if (user == null){
+            return 0;
+        }
+        return userMapper.insert(user);
     }
+
+    public int insertList(List<User> userList){
+        if (CollectionUtils.isEmpty(userList)){
+            return 0;
+        }
+        return userMapper.insertList(userList);
+    }
+
+    public int update(User user){
+        if (user == null || user.getId() == null || user.getId() < Num.NUM_0){
+            return 0;
+        }
+        return userMapper.update(user);
+    }
+
+    public User queryOne(UserParam param){
+        if (param == null){
+            return null;
+        }
+        return userMapper.queryOne(param);
+    }
+
+    public User getById(Long userId){
+        UserParam userParam = new UserParam();
+        userParam.setId(userId);
+        return userMapper.queryOne(userParam);
+    }
+
+    public List<User> queryList(UserParam param){
+        if (param == null){
+            return Collections.emptyList();
+        }
+        return userMapper.queryList(param);
+    }
+
 }

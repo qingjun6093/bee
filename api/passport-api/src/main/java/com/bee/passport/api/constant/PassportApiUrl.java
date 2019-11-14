@@ -9,7 +9,10 @@ import com.bee.common.constant.ApiUrl;
  */
 public interface PassportApiUrl {
 
+    /**passport服务 /client/passport **/
     String passport = ApiUrl.CLIENT + ApiUrl.PASSPORT;
+
+
     /**发送注册短信**/
     String registerSms = passport + "/sendRegisterSms";
 

@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @author jjq
  * @version 1.0
  * @date 2019/6/16
- * @desc client全局基础响应类
+ * @desc 全局基础响应类
  */
 public class BeeResp<T> implements Serializable{
     private static final long serialVersionUID = 2663449263928417461L;
@@ -20,6 +20,7 @@ public class BeeResp<T> implements Serializable{
 
     private T data;
 
+
     public  BeeResp success(){
         return new BeeResp(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc());
     }
@@ -27,6 +28,10 @@ public class BeeResp<T> implements Serializable{
 
     public  BeeResp success(T data){
         return new BeeResp(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc(), data);
+    }
+
+    public  boolean isSuccess(){
+        return BeeCode.SUCCESS.getValue()==this.code;
     }
 
 
@@ -39,6 +44,9 @@ public class BeeResp<T> implements Serializable{
     public BeeResp(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
+    }
+
+    public BeeResp() {
     }
 
     public Integer getCode() {

@@ -1,5 +1,7 @@
 package com.bee.passport.api.req;
 
+import com.bee.common.BeeReq;
+
 import java.io.Serializable;
 
 /**
@@ -8,5 +10,5 @@ import java.io.Serializable;
  * @date 2019/7/12
  * @desc 注册短信请求体
  */
-public class RegisterSmsReq implements Serializable{
+public class RegisterSmsReq extends BeeReq {
 }

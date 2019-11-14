@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bee.account.mapper.UserMapper">
+<mapper namespace="com.bee.passport.mapper.UserMapper">
     <!--auto generated Code-->
-    <resultMap id="AllColumnMap" type="com.bee.account.api.entity.User">
+    <resultMap id="AllColumnMap" type="com.bee.passport.api.entity.User">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="password" property="password"/>

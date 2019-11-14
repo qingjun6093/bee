@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 public class BeeReq implements Serializable{
 
-    private String platform;
+    private String platform = Platform.PC.desc;
 
     private String channel;
 
@@ -22,6 +22,8 @@ public class BeeReq implements Serializable{
     private String mid;
 
     private String appVersion;
+
+    private Long userId;
 
     public String getPlatform() {
         return platform;
@@ -74,6 +76,14 @@ public class BeeReq implements Serializable{
     @Override
     public String toString() {
         return JSON.toJSONString(this);
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public enum Channel {

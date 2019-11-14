@@ -4,13 +4,15 @@ package com.bee.common.constant;
  * @author jjq
  * @version 1.0
  * @date 2019/6/16
- * @desc 返回码
+ * @desc 前端响应码
  */
-public enum   BeeCode {
+public enum BeeCode {
     SUCCESS(200, "Success"),
     PARAM_INVALID(400, "Param invalid"),
     UNAUTHORIZED(401, "Unauthorized"),
     BEE_SERVER_ERROR(500, "Bee server error"),
+
+    SESSION_NOT_EXIST(1001, "session not exist"),
     ;
 
     /*************** 0--9999 基础响应码 ***********************/
