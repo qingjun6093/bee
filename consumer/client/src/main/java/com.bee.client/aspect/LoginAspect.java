@@ -21,7 +21,7 @@ import org.springframework.util.StringUtils;
  * @author jiangjunqing
  * @date 2019/11/13
  * @desc 登陆的切面处理
- * 此切面的优先级最低,在日志等切面之后
+ * 此切面在日志等切面之前执行
  */
 
 @Aspect

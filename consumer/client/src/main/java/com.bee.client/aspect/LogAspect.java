@@ -44,7 +44,7 @@ public class LogAspect {
         Object proceed = joinPoint.proceed();
         logger.info("{}|response:\n{}", methodFullName, proceed);
         logger.info("============================end============================");
-        return joinPoint.proceed();
+        return proceed;
     }
 
 

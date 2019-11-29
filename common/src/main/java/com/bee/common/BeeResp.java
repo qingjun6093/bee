@@ -46,6 +46,12 @@ public class BeeResp<T> implements Serializable{
         this.msg = msg;
     }
 
+    public BeeResp(T data) {
+        this.code = BeeCode.SUCCESS.getValue();
+        this.msg = BeeCode.SUCCESS.getDesc();
+        this.data = data;
+    }
+
     public BeeResp() {
     }
 

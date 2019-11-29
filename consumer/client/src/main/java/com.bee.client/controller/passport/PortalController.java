@@ -27,6 +27,7 @@ public class PortalController {
     @RequestMapping(value = PassportApiUrl.registerSms,method = RequestMethod.POST)
     @ResponseBody
     public BeeResp<RegisterSmsResp> sendRegisterSms(@RequestBody RegisterSmsReq req){
+        userRpc.getById(1L);
         return new BeeResp<RegisterSmsResp>(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc());
     }
 

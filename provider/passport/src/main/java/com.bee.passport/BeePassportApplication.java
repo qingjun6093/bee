@@ -1,7 +1,10 @@
 package com.bee.passport;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ApplicationContext;
 
 /**
  * @author jjq
@@ -12,6 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BeePassportApplication {
     public static void main(String[] args) {
-        new SpringApplication(BeePassportApplication.class).run(args);
+        ApplicationContext ctx = new SpringApplicationBuilder()
+                .sources(BeePassportApplication.class)
+                .web(WebApplicationType.NONE)
+                .run(args);
     }
 }
