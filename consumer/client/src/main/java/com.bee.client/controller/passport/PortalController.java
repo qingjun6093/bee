@@ -3,7 +3,9 @@ package com.bee.client.controller.passport;
 import com.bee.common.BeeResp;
 import com.bee.common.constant.BeeCode;
 import com.bee.passport.api.constant.PassportApiUrl;
+import com.bee.passport.api.entity.User;
 import com.bee.passport.api.req.RegisterSmsReq;
+import com.bee.passport.api.req.UserIdReq;
 import com.bee.passport.api.resp.RegisterSmsResp;
 import com.bee.passport.api.rpc.UserRpc;
 import org.apache.dubbo.config.annotation.Reference;
@@ -26,10 +28,11 @@ public class PortalController {
 
     @RequestMapping(value = PassportApiUrl.registerSms,method = RequestMethod.POST)
     @ResponseBody
-    public BeeResp<RegisterSmsResp> sendRegisterSms(@RequestBody RegisterSmsReq req){
-        userRpc.getById(1L);
-        return new BeeResp<RegisterSmsResp>(BeeCode.SUCCESS.getValue(),BeeCode.SUCCESS.getDesc());
+    public BeeResp<User> sendRegisterSms(@RequestBody RegisterSmsReq req){
+        BeeResp<User> resp = userRpc.getById(-1L);
+        return resp;
     }
+
 
 
 

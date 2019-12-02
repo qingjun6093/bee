@@ -1,8 +1,6 @@
 package com.bee.passport.rpc;
 
 import com.bee.common.BeeResp;
-import com.bee.common.constant.BeeCode;
-import com.bee.common.exception.BeeException;
 import com.bee.passport.api.entity.User;
 import com.bee.passport.api.rpc.UserRpc;
 import com.bee.passport.dao.UserDao;
@@ -18,13 +16,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  * 2.便于参数验证
  */
 
-@Service
+@Service(validation = "true")
 public class UserRpcImpl implements UserRpc {
 
     @Autowired
     private UserDao userDao;
 
-    public BeeResp<User> getById(Long userId){
+    public BeeResp<User> getById(long userId){
         User user = userDao.getById(userId);
         return new BeeResp<User>(user);
     }

@@ -1,0 +1,1 @@
+validateFilter=com.bee.common.dubbofilter.ParamValidateFilter

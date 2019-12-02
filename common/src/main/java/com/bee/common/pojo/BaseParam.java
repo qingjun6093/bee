@@ -2,6 +2,7 @@ package com.bee.common.pojo;
 
 import com.alibaba.fastjson.JSON;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -49,6 +50,8 @@ public class BaseParam {
     private Long start;
 
     private Integer pageSize;
+
+    private Date createTime;
 
     public Long getId() {
         return id;
@@ -128,6 +131,14 @@ public class BaseParam {
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override

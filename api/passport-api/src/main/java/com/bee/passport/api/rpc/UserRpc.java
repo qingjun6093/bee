@@ -3,6 +3,12 @@ package com.bee.passport.api.rpc;
 import com.bee.common.BeeResp;
 import com.bee.common.exception.BeeException;
 import com.bee.passport.api.entity.User;
+import com.bee.passport.api.req.UserIdReq;
+
+import javax.validation.ConstraintViolationException;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author jiangjunqing
@@ -17,5 +23,5 @@ public interface UserRpc {
      * @return
      * @throws BeeException
      */
-    BeeResp<User> getById(Long userId);
+    BeeResp<User> getById(@Min(value = 1,message = "id不能小于1")long userId);
 }

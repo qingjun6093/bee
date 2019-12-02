@@ -1,6 +1,7 @@
 package com.bee.common.pojo;
 
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -14,6 +15,7 @@ public class BaseEntity {
     /**
      * id
      */
+    @NotNull
     private Long id;
 
     /**
